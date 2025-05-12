@@ -57,7 +57,7 @@ const objectExample: ObjectTypes = {
 console.log("\nObject Types:", objectExample);
 
 // 4. 联合类型和类型别名
-type ID = string | number;
+export type ID = string | number;
 type Status = "pending" | "approved" | "rejected";
 
 const idExample: ID = "abc123"; // 可以是字符串

@@ -2,10 +2,14 @@
 // import "./examples/basic-types.js";
 // import "./examples/generics.js";
 
+import { ID } from "./examples/basic-types";
+
 console.log("hello world");
 
 function hi(msg: string) {
   console.log(msg);
 }
 
-console.log("\nTypeScript Types Practice Completed!");
+const id: ID = 1111
+
+// hi(id)

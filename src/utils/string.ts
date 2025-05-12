@@ -1,0 +1,1 @@
+const msg : any = 123
