@@ -1,6 +1,8 @@
 // 基本类型示例
 console.log("\n=== Basic Types Example ===\n");
 
+const a: number = 123
+
 // 1. 基本类型
 type PrimitiveTypes = {
   string: string;

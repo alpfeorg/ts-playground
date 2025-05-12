@@ -1,5 +1,5 @@
 // 导入示例
-// import "./examples/basic-types.js";
+import "./examples/basic-types";
 // import "./examples/generics.js";
 
 import { ID } from "./examples/basic-types";
