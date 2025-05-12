@@ -175,3 +175,13 @@ src/test.ts:2:7 - error TS2322: Type 'string' is not assignable to type 'number'
 3. 遵循项目的代码风格
 4. 提供有意义的控制台输出
 5. 测试类型错误提示功能
+
+```
+// 当你写
+   import './examples/advanced-types'
+   
+// TypeScript 和 Node.js 会：
+// 1. 首先查找 advanced-types.ts
+// 2. 如果找不到，再查找 advanced-types.js
+// 3. 如果还找不到，才会报错
+```
