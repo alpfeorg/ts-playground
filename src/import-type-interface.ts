@@ -12,6 +12,7 @@ import { Person } from "./module";
 let p: Person = {
   name: "ddddd",
   age: 100,
+  school: '123'
 };
 
 import {AnimalInterface} from "./module"
