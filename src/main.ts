@@ -13,3 +13,5 @@
 // const id: ID = 1111
 
 import "./import-type-interface"
+
+import "./string-number-boolean"
