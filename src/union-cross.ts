@@ -122,3 +122,9 @@ let dba: ErrRes<Array<number>> = {
     result: [1,2,3]
 }
 
+let eee: ErrRes<number> = {
+    code: 400,
+    msg: 'eeee',
+    // result: '123123' // 泛型限制了是 number类型，这里赋值 string
+}
+

@@ -18,4 +18,6 @@
 
 // import "./array-tuple"
 
-import "./union-cross"
+// import "./union-cross"
+
+import "./function"

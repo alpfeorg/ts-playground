@@ -45,7 +45,7 @@ for(let i=0;i<fa.length;i++) {
 
 // fa = [undefined] // 再次赋值，赋同样的 undefined 也不行
 
-let arr = [] // 推断为 any[]
+let arr = [] // 这里arr推断为 any[]，所以后面push 任何东西都可以，不会报错
 arr.push(1)
 arr.push('1111')
 
