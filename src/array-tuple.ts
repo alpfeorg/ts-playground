@@ -49,3 +49,18 @@ let arr = [] // 这里arr推断为 any[]，所以后面push 任何东西都可�
 arr.push(1)
 arr.push('1111')
 
+// 只读数组
+type jj = readonly number[] // literal syntax
+// type jjj = readonly Array<number> // err
+
+type jjjj = ReadonlyArray<number>
+
+let ra: readonly number[] =  [1,2,3]
+// ra.push(123) // error
+
+
+let rb:jjjj = [1,2,3]
+rb.at(1)
+// rb.pop()
+
+

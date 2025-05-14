@@ -38,3 +38,8 @@ let f_addr:addr
 // let cc:number = undefined
 // let dd: null = undefined
 
+// vue props 类型声明
+// https://cn.vuejs.org/guide/components/props.html#prop-validation
+// https://cn.vuejs.org/api/sfc-script-setup#type-only-props-emit-declarations
+// ! 对于props的类型检测只是dev时，打包后就是key的数组
+

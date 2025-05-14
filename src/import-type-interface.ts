@@ -61,3 +61,19 @@ interface IPoint {
   x:number
   y:number
 }
+
+// let point3 : IPoint = {x:0, y:0, z:0}
+let point3 : IPoint = {x:0, y:0, z:0} as IPoint //类型断言。 我知道我在干什么，相信我
+// let point4: IPoint = {x:0} as IPoint //err. 这个转换并不能保证正确执行
+let point4: IPoint = {x: 0, y: '123123'} as unknown as IPoint //! 类型断言要小心
+console.log(point4.x, point4.y, point4.x + point4.y);
+
+type hello = "hello"
+
+// let s:hello = 'world' // err: 报错里称 type world ,type hello
+
+function say(m:hello) {
+  console.log(m);
+}
+
+say('hello')

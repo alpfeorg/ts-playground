@@ -12,7 +12,7 @@
 
 // const id: ID = 1111
 
-// import "./import-type-interface"
+import "./import-type-interface"
 
 // import "./string-number-boolean"
 
@@ -20,4 +20,4 @@
 
 // import "./union-cross"
 
-import "./function"
+// import "./function"
