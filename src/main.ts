@@ -12,6 +12,10 @@
 
 // const id: ID = 1111
 
-import "./import-type-interface"
+// import "./import-type-interface"
 
-import "./string-number-boolean"
+// import "./string-number-boolean"
+
+// import "./array-tuple"
+
+import "./union-cross"

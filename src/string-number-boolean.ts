@@ -20,3 +20,21 @@ console.log(c);
 console.log(typeof c);
 
 
+
+let f : string|undefined
+
+// f = null
+
+type addr = string | null
+
+let f_addr:addr
+
+// f_addr = undefined // undefind 不能赋值给 addr 类型，
+// f_addr = null
+// console.log("🚀 ~ f_addr:", f_addr) // 没有明确的赋值操作，ts通过告警阻断了
+
+
+// let bb:undefined = null
+// let cc:number = undefined
+// let dd: null = undefined
+

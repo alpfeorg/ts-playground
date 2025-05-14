@@ -18,3 +18,34 @@ let b: [number] = [1]
  */
 
 export {}
+
+// a.push(true)
+
+let ba : (string|number)[] = [1,2,3]
+ba.push('111')
+
+let ca : Array<string|number> = [1, '2222']
+
+let da: string[]|number[] = [1,2,3]
+// da.push('dddd')
+
+let ea: string|number[] = [1,2,3]
+ea.push(1111)
+// ea.push('aaaaa')
+
+ea = 'bbbbbbb'
+
+let fa: Array<number> = new Array(10) // 第一次赋值时虽然类型并不对应，但没问题
+fa.push(1)
+console.log("🚀 ~ fa:", fa, fa.length)
+for(let i=0;i<fa.length;i++) {
+    console.log(fa[i]);
+    
+}
+
+// fa = [undefined] // 再次赋值，赋同样的 undefined 也不行
+
+let arr = [] // 推断为 any[]
+arr.push(1)
+arr.push('1111')
+

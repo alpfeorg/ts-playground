@@ -40,6 +40,7 @@ function hi(person: { name: string; age: number }) {
 // ! 是分号啊，还是逗号啊
 // ! 声明的类型，type，别名
 // ! 最后是 分号
+// 在js里是没有分号的
 function foo(person: { name: string, age: number }) {
   console.log(person.name);
   console.log(person.age);
@@ -54,3 +55,9 @@ let point2: Point = { x: 0, y: 0 };
 
 point2 = point1;
 point1 = point2;
+
+
+interface IPoint {
+  x:number
+  y:number
+}

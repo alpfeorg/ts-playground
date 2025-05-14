@@ -71,3 +71,17 @@ console.log("\nUnion Types:", {
   numberId: anotherIdExample,
   status: statusExample,
 });
+
+
+enum Options {
+  first,
+  second,
+  third
+}
+
+let op: Options = Options.first
+
+function opp(op:Options) {
+  console.log(op);
+  
+}
