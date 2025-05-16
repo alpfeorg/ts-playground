@@ -14,7 +14,7 @@
 
 // import "./import-type-interface"
 
-// import "./string-number-boolean"
+import "./string-number-boolean"
 
 // import "./array-tuple"
 
@@ -23,4 +23,4 @@
 // import "./function"
 
 
-import "./any-never-unknown-undefined-null"
+// import "./any-never-unknown-undefined-null"

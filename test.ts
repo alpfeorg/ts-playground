@@ -1,3 +1,6 @@
+
+// let a : string = 123
+
 enum dd {
     a = 1,
     b,
@@ -47,12 +50,13 @@ if(res.status === 'working') {
 // 常量枚举，编译后，所用到枚举的地方会直接引用值，这个枚举最后是不存在的
 // 而普通的枚举，是定义了对应的对象，directions 数组里是访问了这些枚举值.
 // tsc 以后就能看出来
- const enum Directions {
+ enum Directions {
     Up,
     Down,
     Left,
     Right,
   }
+
   
   let directions = [
     Directions.Up,

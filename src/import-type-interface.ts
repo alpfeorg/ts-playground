@@ -10,7 +10,9 @@ import { Person } from "./module";
 let p: Person = {
   name: "ddddd",
   age: 100,
+  // address: undefined,
   // school: '123'
+  // school: undefined
 };
 
 import { AnimalInterface } from "./module";

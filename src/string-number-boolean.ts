@@ -1,8 +1,32 @@
 // let a: string = 123
 
+
+//  string  number boolean null undefined symbol bigint
+
 let b :string = 'bbb'
+
+let bbbb = 'bbbb'
+
+let ccc
+console.log("🚀 ~ string-number-boolean.ts:11 ~ ccc:", ccc)
+
+ccc = 'cccc'
+ccc = 123
+
+// ccc.length
+
+// ccc.toFixed(2)
+
+// (ccc as number[]).push(1)
+
+
+// undefined
+// null
+
 let c: String = 'cccc'
 let d:String = 'dddd'
+
+
 
 /**
  * string 和 String
