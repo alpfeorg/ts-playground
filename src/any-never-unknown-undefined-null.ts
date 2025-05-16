@@ -6,7 +6,18 @@
 export {}
 
 let a: any = '123'
-a.xxx()
+a = true
+console.log("🚀 ~ any-never-unknown-undefined-null.ts:10 ~ a:", a)
+
+
+// a.xxx()
+
+
+function fff(val) {
+  console.log("🚀 ~ any-never-unknown-undefined-null.ts:17 ~ fff ~ val:", val)
+}
+
+fff(123)
 
 let b:unknown = []
 // b.push(1) // err. b 的类型是 unknown，不知道什么类型.既然不知道，那就不能执行任何操作，会很危险
