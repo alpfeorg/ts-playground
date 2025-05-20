@@ -14,7 +14,9 @@
 
 // import "./import-type-interface"
 
-import "./string-number-boolean"
+// import "./string-number-boolean"
+
+import "./generics"
 
 // import "./array-tuple"
 

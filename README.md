@@ -185,3 +185,7 @@ src/test.ts:2:7 - error TS2322: Type 'string' is not assignable to type 'number'
 // 2. 如果找不到，再查找 advanced-types.js
 // 3. 如果还找不到，才会报错
 ```
+
+## 资源
+
+1. [TypeScript 教程](https://wangdoc.com/typescript/)

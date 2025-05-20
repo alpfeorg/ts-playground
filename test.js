@@ -1,4 +1,5 @@
 // let a : string = 123
+var _a;
 var dd;
 (function (dd) {
     dd[dd["a"] = 1] = "a";
@@ -51,3 +52,10 @@ var directions = [
     Directions.Left,
     Directions.Right,
 ];
+function check(obj) {
+    console.log(obj["isWork" /* KEYS.isWork */]);
+}
+check((_a = {},
+    _a["isWork" /* KEYS.isWork */] = true,
+    _a["isDone" /* KEYS.isDone */] = false,
+    _a));

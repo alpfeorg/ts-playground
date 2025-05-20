@@ -11,7 +11,7 @@ let p: Person = {
   name: "ddddd",
   age: 100,
   // address: undefined,
-  // school: '123'
+  school: '123'
   // school: undefined
 };
 
@@ -58,7 +58,7 @@ let point2: Point = { x: 0, y: 0 };
 point2 = point1;
 point1 = point2;
 
-
+// ! type 和 interface 的第一个大不同，就是type 有个=号，interface 没有。
 interface IPoint {
   x:number
   y:number
@@ -79,3 +79,5 @@ function say(m:hello) {
 }
 
 say('hello')
+// say('world') // err
+

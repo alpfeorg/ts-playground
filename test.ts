@@ -64,6 +64,26 @@ if(res.status === 'working') {
     Directions.Left,
     Directions.Right,
   ];
+
+  /**
+   * 常量枚举，特点是编译后，这个枚举消失了，使用它的地方都是被直接替换了
+   * 所以有个很好用的场景：
+   * 在跟后台合作时，经常遇到加字段，改字段，但又不能立马给到前端，那前端可以写个 enum ，里面的field 自己定义。这样编译后，用的地方都是直接替换为对应的 field。
+   * 等后台确定了，只要换 enum里的field 就行了，不需要改其他的，或者再对
+   */
+  const enum KEYS {
+    isWork = 'isWork',
+    isDone = 'isDone',
+  }
+
+  function check(obj: { [key in KEYS]: boolean }) {
+    console.log(obj[KEYS.isWork]);
+  }
+
+  check({
+    [KEYS.isWork]: true,
+    [KEYS.isDone]: false,
+  })
   
 
 

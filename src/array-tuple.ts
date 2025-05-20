@@ -21,19 +21,25 @@ export {}
 
 // a.push(true)
 
+// ---------注意类型的写法
+// !不同的写法,代表不同的含义
 let ba : (string|number)[] = [1,2,3]
 ba.push('111')
 
 let ca : Array<string|number> = [1, '2222']
+ca = ba
 
 let da: string[]|number[] = [1,2,3]
-// da.push('dddd')
+// da.push('dddd') // error
+
+ca = da
 
 let ea: string|number[] = [1,2,3]
 ea.push(1111)
 // ea.push('aaaaa')
-
 ea = 'bbbbbbb'
+// ea.push(1) //! error
+// --------------------------
 
 let fa: Array<number> = new Array(10) // 第一次赋值时虽然类型并不对应，但没问题
 fa.push(1)
