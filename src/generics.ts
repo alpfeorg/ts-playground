@@ -1,3 +1,5 @@
+import {ID} from "./examples/basic-types";
+
 export {}
 
 
@@ -75,3 +77,32 @@ const a3 = comp({length: 1}, {length: 2})
 const a4 = comp({length: 1}, {length: 2, name: '123'})
 // const a5 = comp(1,2)
 
+
+type MakeArray<T> = [T] extends [any] ? T[] : never
+type StringArray = MakeArray<string>
+type NumberArray = MakeArray<number>
+type IDArray = MakeArray<number|string> // (number|string)[]
+
+let ids: IDArray = [1,2,'333333333']
+// ids.push(true) // Argument of type 'boolean' is not assignable to parameter of type 'string | number'
+
+type Tup = [number, string]
+let tup: Tup = [1, 'aaa'] // tuple
+tup.push('a') //ok 只能push进去定义的类型的联合类型
+// tup = ['a','a'] //err
+// tup.push(true) // err //Argument of type 'boolean' is not assignable to parameter of type 'string | number'
+tup.pop()
+tup.pop()
+console.log("=>(generics.ts:94) tup", tup, tup[1], tup[1].substring(0,1));// ts里 ok，但实际执行报错 没值，但可以访问
+tup.push(1,2,3,4,5)
+// @ts-ignore
+console.log("=>(generics.ts:98) tup", tup[5]); // err 有值，但不然访问
+
+
+// let bup: Tup = [1] // err 缺元素
+let cup: Tup
+// cup = [1]
+
+// cup[0] = 1
+cup = tup // tup 实际上已经不满足类型 Tup 的要求，但依然可以赋值
+console.log("=>(generics.ts:103) cup", cup);

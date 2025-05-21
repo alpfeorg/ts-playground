@@ -81,3 +81,20 @@ function say(m:hello) {
 say('hello')
 // say('world') // err
 
+interface Animal {
+  live():void
+  eat: () => void
+}
+
+const animal :Animal = {
+  live: function () {
+    console.log('live')
+  },
+  eat: function () {
+    console.log('eat')
+  }
+}
+
+animal.eat();
+animal.live()
+

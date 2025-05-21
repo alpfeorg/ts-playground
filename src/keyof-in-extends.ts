@@ -1,4 +1,4 @@
-import { read } from "fs";
+
 import { Person } from "./module";
 
 export {}
@@ -30,6 +30,24 @@ interface T {
 type KeyT = keyof T; //! string | number
 
 type Result = keyof [1,2,3] //????
+
+type cc = keyof { a: 1, b: 2 }
+
+let dv = { a: 1, b: 2 }
+type dd = keyof typeof dv
+
+type ee = keyof "123"
+
+type f1 = keyof 123 // 可以加基础类型，不能加引用类型。引用类型要加 typeof
+
+
+let fv = new String('123')
+type ff = keyof typeof fv
+
+type gg = typeof fv
+
+
+
 
 let arr = [1,1,1]
 type Result2 = keyof typeof arr // ???
