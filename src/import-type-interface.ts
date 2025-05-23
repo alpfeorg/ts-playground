@@ -98,3 +98,26 @@ const animal :Animal = {
 animal.eat();
 animal.live()
 
+type world = 'world'
+// let s: world = 'hello' // err
+let sa = 'hello' as world // ok 不报错，但实际意义不对
+
+let st : string = sa
+st = '123123' 
+sa = st // err  string 类型不能赋值给 ’world‘ 类型
+
+//! 类似继承原则，子类可以赋值给父类，但父类不能赋值给子类
+
+// ! Record 内部已经限定了 key的类型是个联合类型，只能是这里面的3选1
+// type mappp  = Record<boolean, string> 
+
+// type fk = keyof any // string | number | symbol
+
+type fns = Record<string, () => void>
+const FnList: fns = {
+  afunc: () => {},
+  bfunc: () => {},
+  cfunc: () => { return 1 } // !并不会报错
+}
+
+
