@@ -104,7 +104,7 @@ let sa = 'hello' as world // ok 不报错，但实际意义不对
 
 let st : string = sa
 st = '123123' 
-sa = st // err  string 类型不能赋值给 ’world‘ 类型
+// sa = st // err  string 类型不能赋值给 ’world‘ 类型
 
 //! 类似继承原则，子类可以赋值给父类，但父类不能赋值给子类
 

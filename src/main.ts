@@ -16,7 +16,7 @@
 
 // import "./string-number-boolean"
 
-import "./generics"
+// import "./generics"
 
 // import "./array-tuple"
 
@@ -26,3 +26,5 @@ import "./generics"
 
 
 // import "./any-never-unknown-undefined-null"
+
+import "./examples/00014-easy-first"

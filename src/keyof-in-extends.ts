@@ -38,13 +38,18 @@ type dd = keyof typeof dv
 
 type ee = keyof "123"
 
-type f1 = keyof 123 // 可以加基础类型，不能加引用类型。引用类型要加 typeof
+type f1 = keyof 123 // 可以加基础类型，不能加引用类型。引用类型要加 typeof // 字面量转为 Number 构造函数创建的对象，再找他的key
+// type f2 = typeof 123 //err typeof 后面只能跟变量名
 
+type f3  = typeof String //! f3 = StringConstructor. String 在这代表的是什么？ String这个类？还是 String这个interface？
 
 let fv = new String('123')
-type ff = keyof typeof fv
+type ff = keyof typeof fv // keyof String ,String 在这里也是个实际的存在，就是 js里String这个类，是js中的类就意味着他是个Object，是个对象，就可以用keyof
 
 type gg = typeof fv
+
+let gg1: gg = 'length123' // ok
+// let ff1: ff = gg1 //err
 
 
 
