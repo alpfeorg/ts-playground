@@ -221,3 +221,68 @@ type P = {
 // !!!!!
 // !!!!!
 // !!!! 联合类型要求至少满足一个类型就对。并且不允许有未曾出现过的属性或者方法
+
+// 组合多个接口
+type Draggable = {
+    drag(): void;
+}
+
+type Resizable = {
+    resize(): void;
+}
+
+type UIWidget = Draggable & Resizable;
+
+let ui: UIWidget = {
+    drag() {
+        console.log('drag')
+    },
+    resize() {
+        console.log('resize')
+    },
+    // name: '123' //err 不存在的属性
+}
+
+// err 缺少resize方法
+// let ui2: UIWidget = {
+//     drag() {}
+// }
+
+function isString(value: string | number): boolean { // value is string 表示返回的是boolean类型，并且如果是true的话， value类型会被收窄，它 一定是 string
+    return typeof value === 'string';
+}
+
+function example(value: string | number) {
+    if (isString(value)) {
+        // 这里 value 的类型仍然是 string | number
+        // TypeScript 不知道 value 一定是 string
+        value.toUpperCase(); // 错误！因为 value 可能是 number
+    }
+}
+
+type User = {
+    name: string;
+    age: number;
+    email: string;
+}
+
+type BaseUser = Omit<User, 'email'|'age'>
+
+let baseUser: BaseUser = {
+    name: '123'
+}
+
+/**
+ * !!! 这么用 Exclude 是错的
+ * Exclude 用于移除联合类型中的某个类型，而不能作用于对象类型。
+ * 如果想作用于对象类型，需要使用 Omit 来实现。
+ */
+
+type ExcludeUser = Exclude<User, 'email'|'age'> // ExcludeUser 就是 User，并没有去掉任何属性
+// User 是一个对象类型，被 Exclude 当成一个整体，并不会去移除 email 和 age 这样的属性。因为 email 和 age 不在这个整体上，而是这个整体内的一个属性
+
+let excludeUser: ExcludeUser = {
+    name: '123',
+    age: 123,
+    email: '123@123.com'
+}
