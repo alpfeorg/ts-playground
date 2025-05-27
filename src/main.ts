@@ -27,7 +27,9 @@
 
 // import "./any-never-unknown-undefined-null"
 
-import "./examples/00014-easy-first"
+// import "./examples/00014-easy-first"
+
+import "./union-cross"
 
 
 function main() {

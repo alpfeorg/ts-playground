@@ -115,7 +115,7 @@ type UserProps = {
   createdAt: Date;
 }
 
-// 从T中，把所有在U中出现的属性全部排出掉
+// 从一个联合类型T中，把所有在U中出现的属性全部排出掉
 // 先将T中的每一个类型去与U做比较，如果有，就是never，如果没有，就是他自己
 // 最后将结果合并。 never | never | 'name' | 'age' , never 会在联合类型中被忽略，所以最后就是 'name' | 'age'
 type EditableProps = Exclude<keyof UserProps, 'id' | 'createdAt'>
