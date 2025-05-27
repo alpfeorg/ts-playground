@@ -28,3 +28,10 @@
 // import "./any-never-unknown-undefined-null"
 
 import "./examples/00014-easy-first"
+
+
+function main() {
+    console.log('=============既可以测试ts类型，也可以用ts写leetcode代码=============')
+}
+
+main()

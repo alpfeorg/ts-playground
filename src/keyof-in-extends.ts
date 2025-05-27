@@ -85,3 +85,44 @@ const obj: ReadonlyMyObj = {
 }
 
 // obj.foo = 2; // Error: Cannot assign to 'foo' because it is a read-only property.
+
+type V = keyof any //! string|number|symbol
+type OV<O extends {}> = keyof O
+
+type o1 = OV<{name: '123', age: 19}> // 'name'|'age'
+
+type o2 = OV<'1'|'2'>
+type o3 = OV<() => {}>
+type o4 = OV<1>
+type o5 = OV<[1,2,3]> // ??? '0'|'1'|'2'|'length'|...
+
+type UniqueId = V
+
+let id1: UniqueId = 1
+let id2: UniqueId = '2222'
+let id3: UniqueId = Symbol('ccc')
+
+type exist<Keys, Groups> = Keys extends Groups ? true : false
+
+type e1 = exist<'1'|2, keyof any> // e1 = true
+
+
+// 从所有可能的属性中排除掉 'id' 和 'createdAt'
+type UserProps = {
+  id: string;
+  name: string;
+  age: number;
+  createdAt: Date;
+}
+
+// 从T中，把所有在U中出现的属性全部排出掉
+// 先将T中的每一个类型去与U做比较，如果有，就是never，如果没有，就是他自己
+// 最后将结果合并。 never | never | 'name' | 'age' , never 会在联合类型中被忽略，所以最后就是 'name' | 'age'
+type EditableProps = Exclude<keyof UserProps, 'id' | 'createdAt'>
+// 结果: 'name' | 'age'
+
+function change(key: EditableProps, value: any) {
+
+}
+change('name', '123')
+// change('addr', '123')
